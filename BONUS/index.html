@@ -14,7 +14,7 @@
     <div id="app">
 
         <div class="container" >
-            <div @mouseenter="stopInterval" class="slider-wrapper" tabindex="0">
+            <div @mouseenter="stopInterval" @mouseleave="startInterval" class="slider-wrapper" tabindex="0">
 
                 <div class="item">
                     <img :src="slides[currentThumb].image" alt="slides[currentThumb].title"/>

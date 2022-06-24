@@ -56,9 +56,14 @@ var app = new Vue({
         stopInterval() {
             clearInterval(this.myInterval);
             this.myInterval = null;
-        }
+
+        },
+
+        startInterval() {
+            this.myInterval = setInterval(this.showNextElement, 3000)
+        },
     },
     mounted() {
-        this.myInterval = setInterval(this.showNextElement, 3000)
+        this.startInterval();
     },
 })
