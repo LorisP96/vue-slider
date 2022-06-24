@@ -31,6 +31,7 @@ var app = new Vue({
         currentThumb: 0,
     },
     methods: {
+        
         showNextElement() {
             if(this.currentThumb < this.slides.length - 1) {
                 this.currentThumb++;
@@ -46,5 +47,5 @@ var app = new Vue({
                 this.currentThumb = this.slides.length - 1;
             }
         }
-    },
+    }, 
 })

@@ -17,7 +17,7 @@
             <div class="slider-wrapper" tabindex="0">
 
                 <div class="item">
-                    <img :src="slides[currentThumb].image" alt="slides[currentThumb].title" />
+                    <img :src="slides[currentThumb].image" alt="slides[currentThumb].title"/>
                     <div class="text">
                         <h3>{{ slides[currentThumb].title }}</h3>
                         <p>{{ slides[currentThumb].text }}</p>
@@ -29,7 +29,7 @@
                     <div @click="showPrevElement" class="prev"></div>
                     <!-- freccia giu -->
                     <div @click="showNextElement" class="next"></div>
-                    <div v-for="thumb in slides" class="thumb">
+                    <div v-for="(thumb, index) in slides" :class="{ 'active': index === currentThumb }" class="thumb">
                         <img :src="thumb.image" :alt="thumb.title"/>
                     </div>
                 </div>
