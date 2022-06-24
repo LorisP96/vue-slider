@@ -29,6 +29,7 @@ var app = new Vue({
             }
         ],
         currentThumb: 0,
+        myInterval: null,
     },
     methods: {
 
@@ -51,8 +52,13 @@ var app = new Vue({
                 this.currentThumb = this.slides.length - 1;
             }
         },
+        
+        stopInterval() {
+            clearInterval(this.myInterval);
+            this.myInterval = null;
+        }
     },
     mounted() {
-        setInterval(this.showNextElement, 3000)
+        this.myInterval = setInterval(this.showNextElement, 3000)
     },
 })
