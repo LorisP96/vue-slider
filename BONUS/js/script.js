@@ -50,6 +50,9 @@ var app = new Vue({
             } else {
                 this.currentThumb = this.slides.length - 1;
             }
-        }
-    }, 
+        },
+    },
+    mounted() {
+        setInterval(this.showNextElement, 3000)
+    },
 })
